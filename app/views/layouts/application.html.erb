@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    
+    <header>
+      <h1>Becoming Kentastic</h1>
+      <p>Come along for the ride with someone in their 50s learning how to code</p>
+    </header>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts">Posts</a>
+    </nav>
+    
     <%= yield %>
+    
+    <footer>
+      <p>Becoming Kentastic Sunday October 23 2022 -  <%=Time.zone.now.to_fs(:long) %>
+      </p>
+    </footer>
+      
   </body>
 </html>
