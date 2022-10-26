@@ -13,21 +13,17 @@
   </head>
 
   <body>
-    
     <header>
       <h1>Becoming Kentastic</h1>
       <p>Come along for the ride with someone in their 50s learning how to code</p>
     </header>
-
     <nav>
       <a href="/">Home</a>
       <a href="/posts">Posts</a>
     </nav>
-    
     <%= yield %>
-    
     <footer>
-      <p>Becoming Kentastic Sunday October 23 2022 -  <%=Time.zone.now.to_fs(:long) %>
+      <p> © Becoming Kentastic Sunday October 23, 2022 -  <%=Time.zone.now.to_fs(:long) %>
       </p>
     </footer>
       

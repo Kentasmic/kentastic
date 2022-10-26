@@ -71,4 +71,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "prefixed_ids", "~> 1.2"
+gem 'prefixed_ids', '~> 1.3'

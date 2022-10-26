@@ -19,7 +19,7 @@ module Kentastic
     config.time_zone = "Eastern Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 		
-		config.action_view.sanitized_allowed_tags = ['b', 'i', 'u', 'mark','aside','p','br', 'code', 'kbd','pre', 'img', 'figure','figcaption']
-		config.action_view.sanitized_allowed_attributes = ['href', 'title', 'src', 'alt']
+		config.action_view.sanitized_allowed_tags = ['a','b','i','u','mark','aside','p','br','code','kbd','pre','img','figure','figcaption']
+		config.action_view.sanitized_allowed_attributes = ['href','title','src','alt','target']
   end
 end
