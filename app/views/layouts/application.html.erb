@@ -16,6 +16,11 @@
     <header>
       <h1>Becoming Kentastic</h1>
       <p>Come along for the ride with someone in their 50s learning how to code</p>
+      <div turbo_frame="search"><%= form_with url: "", method: :get, data: {turbo_frame: "posts", turbo_action: "advance", controller: "search", action: "input->search#submit"} do |form| %>
+  
+        <%= form.search_field :query, value: params[:query], placeholder: 'Search...' %>
+      <% end %>
+    </div>
     </header>
     <nav>
       <a href="/">Home</a>

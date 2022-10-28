@@ -72,3 +72,5 @@ group :test do
 end
 
 gem 'prefixed_ids', '~> 1.3'
+
+gem "pg_search", "~> 2.3"

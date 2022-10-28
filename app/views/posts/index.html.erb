@@ -4,10 +4,17 @@
   <%= link_to "New post", new_post_path %>
 <% end %>
 
+
+<%= turbo_frame_tag "posts" do %>
 <p id="posts">
+  <%= render @posts %>
+</p>
+<% end %>
+
+<!-- <p id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
-</p>
+</p> -->
 
 

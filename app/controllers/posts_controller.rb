@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all.order(created_at: :desc)
+		@posts = Post.search(params[:query]) if params[:query].present?
   end
+ 
 
   # GET /posts/1
   def show
