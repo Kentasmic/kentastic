@@ -1,0 +1,2 @@
+class RubyTip < ApplicationRecord
+end

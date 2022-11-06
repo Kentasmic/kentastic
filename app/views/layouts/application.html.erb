@@ -16,12 +16,17 @@
     <header>
       <a href="/"><h1>Becoming Kentastic</h1></a>
       <p>Come along for the ride with someone in their 50s learning how to code</p>
-
     </header>
+    
     <nav>
       <a href="/posts">Posts</a>
+      <a href="/ruby_tips">Ruby Tips</a>
+      <a href="/rails_tips">Rails Tips</a>
+      <a href="/articles">Articles</a>
     </nav>
+    
     <%= yield %>
+    
     <footer>
       <p> © Becoming Kentastic Sunday October 23, 2022 -  <%=Time.zone.now.to_fs(:long) %>
       </p>

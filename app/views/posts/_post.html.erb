@@ -1,8 +1,13 @@
-<section id="<%= dom_id post %>">
+<div id="<%= dom_id post %>">
   <p>
     <h2><%= link_to post.title, post_path(post) %></h2>
   </p>
   <p>
     <%= sanitize post.content %>
   </p>
-</section>
+  
+  
+  <p>
+    First posted: <%= post.created_at.to_fs(:long_ordinal)%></br>
+    Last updated: <%= post.updated_at.to_fs(:long_ordinal)%></p>
+</div>

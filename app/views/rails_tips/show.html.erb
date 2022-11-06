@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rails_tip %>
+
+<div>
+  <%= link_to "Edit this rails tip", edit_rails_tip_path(@rails_tip) %> |
+  <%= link_to "Back to rails tips", rails_tips_path %>
+
+  <%= button_to "Destroy this rails tip", @rails_tip, method: :delete %>
+</div>

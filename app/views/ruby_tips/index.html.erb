@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ruby tips</h1>
+
+<div id="ruby_tips">
+  <% @ruby_tips.each do |ruby_tip| %>
+    <%= render ruby_tip %>
+    <p>
+      <%= link_to "Show this ruby tip", ruby_tip %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ruby tip", new_ruby_tip_path %>

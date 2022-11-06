@@ -1,0 +1,2 @@
+module RubyTipsHelper
+end

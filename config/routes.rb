@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+  resources :rails_tips
   
 	root "posts#index"
 	
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
 	#************************************************
 	
 	resources :posts
+	resources :ruby_tips
   
  
 end
