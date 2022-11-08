@@ -1,14 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1>Articles - Many of these are works in progress, updates coming...</h1>
 
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
-  <% end %>
+      <div turbo_frame="search"><%= form_with url: "", method: :get, data: {turbo_frame: "articles", turbo_action: "advance", controller: "search", action: "input->search#submit"} do |form| %>
+  
+        <%= form.search_field :query, value: params[:query], placeholder: 'Search Articles...' %>
+      <% end %>
+    </div>
 </div>
+<% if Current.user %>
+  <%= link_to "New article", new_article_path %>
+<% end %>
 
-<%= link_to "New article", new_article_path %>
+<%= turbo_frame_tag "articles" do %>
+<p id="articles">
+  <%= render @articles %>
+</p>
+<% end %>

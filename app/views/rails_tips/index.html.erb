@@ -6,9 +6,11 @@
   <% @rails_tips.each do |rails_tip| %>
     <%= render rails_tip %>
     <p>
-      <%= link_to "Show this rails tip", rails_tip %>
+      <%= link_to "Show this Rails tip", rails_tip %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New rails tip", new_rails_tip_path %>
+<% if Current.user %>
+  <%= link_to "New Rails tip", new_rails_tip_path %>
+<% end %>

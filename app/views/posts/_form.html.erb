@@ -15,10 +15,11 @@
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title, :size => 80 %>
   </div>
-
+  <p>Use the regular text box for HTML with mark, aside etc or the Trix editor for simpler but longer text entries. Careful though, if you edit and save with Trix any special HTML like mark or aside tags will get stripped out. You can use Trix first and then add special HTML tags using the text area after.</p>
   <div>
     <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content, :cols => 80, :rows => 25  %>
+    <%= form.text_area :content, id: :post_content %>
+    <trix-editor input="post_content"></trix-editor>
   </div>
 
   <div>

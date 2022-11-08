@@ -18,7 +18,8 @@
 
   <div>
     <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
+    <%= form.hidden_field :content, id: :article_content %>
+    <trix-editor input="article_content"></trix-editor>
   </div>
 
   <div>
