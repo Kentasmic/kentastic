@@ -6,7 +6,7 @@ class Article < ApplicationRecord
 	pg_search_scope :search, against: [:title, :content], using: { tsearch: { 
 																																			prefix: true,
 																																			dictionary: "english",
-																																			any_word: true
-																																			
-																															} }
+																																			any_word: true		
+																																		} 
+																																	}
 end

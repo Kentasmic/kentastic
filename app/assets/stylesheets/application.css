@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+trix-toolbar .trix-button-group button {
+  background-color: white;
+}
+
+
+.trix-button-group-spacer,
+.trix-button-group--file-tools,
+.trix-button--icon-increase-nesting-level,
+.trix-button--icon-decrease-nesting-level { display:none; }
